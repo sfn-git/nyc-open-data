@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src="https://www.gstatic.com/charts/loader.js" type="text/javascript")
+        script(defer src="/js/charts.js")
+        script. 
+            var dataBack = [];
+        each val,index in openData
+            script.
+                dataBack.push({
+                    year: '#{val.year}',
+                    leading_cause: '#{val.leading_cause}',
+                    sex: '#{val.sex}',
+                    race_ethnicity: '#{val.race_ethnicity}',
+                    deaths: '#{val.deaths}',
+                });
+        title Testing NYC-Open-Data
+    body
+    #chart_div
